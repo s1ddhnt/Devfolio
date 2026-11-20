@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/webp" href="/avatar.webp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siddhant | Developer &amp; Tinkerer</title>
+    <meta name="description" content="Siddhant — Developer &amp; Tinkerer. Building things, learning deeply, and documenting the journey." />
+    <meta name="author" content="Siddhant" />
+    <script type="module" crossorigin src="/assets/index-BDHMsrRa.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CmQ7yN4u.css">
+    <script>
+      (function() {
+        function showEmailToast(email) {
+          var toast = document.getElementById("email-toast-notification");
+          if (!toast) {
+            toast = document.createElement("div");
+            toast.id = "email-toast-notification";
+            toast.style.cssText = "position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(120px);background:#18181b;color:#f4f4f5;padding:12px 20px;border-radius:9999px;font-family:Switzer,sans-serif;font-size:14px;font-weight:500;box-shadow:0 20px 25px -5px rgba(0,0,0,0.35),0 8px 10px -6px rgba(0,0,0,0.25);border:1px solid #27272a;z-index:999999;display:flex;align-items:center;gap:12px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1);opacity:0;pointer-events:auto;";
+            document.body.appendChild(toast);
+          }
+          var gmailUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(email);
+          toast.innerHTML = '<span style="display:flex;align-items:center;gap:6px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Opening Gmail &amp; copied <strong style="color:#fff;">' + email + '</strong></span><span style="color:#52525b;">|</span><a href="' + gmailUrl + '" target="_blank" rel="noopener noreferrer" style="color:#60a5fa;text-decoration:none;font-weight:600;display:flex;align-items:center;gap:4px;">Open Gmail ↗</a>';
+          requestAnimationFrame(function() {
+            toast.style.opacity = "1";
+            toast.style.transform = "translateX(-50%) translateY(0)";
+          });
+          clearTimeout(toast._timeout);
+          toast._timeout = setTimeout(function() {
+            toast.style.opacity = "0";
+            toast.style.transform = "translateX(-50%) translateY(120px)";
+          }, 5000);
+        }
+
+        function handleEmailAction(e, email) {
+          email = email || "s1ddhnt.16@gmail.com";
+          try {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard.writeText(email);
+            }
+          } catch (_) {}
+
+          var gmailUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(email);
+          try {
+            window.open(gmailUrl, "_blank", "noopener,noreferrer");
+          } catch (_) {
+            window.location.href = gmailUrl;
+          }
+          showEmailToast(email);
+        }
+
+        window.__handleEmailAction = handleEmailAction;
+
+        document.addEventListener("click", function(e) {
+          var link = e.target && e.target.closest && e.target.closest('a[href^="mailto:"]');
+          if (link) {
+            e.preventDefault();
+            var href = link.getAttribute("href") || "";
+            var email = href.replace(/^mailto:/, "").split("?")[0] || "s1ddhnt.16@gmail.com";
+            handleEmailAction(e, email);
+          }
+        }, true);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
