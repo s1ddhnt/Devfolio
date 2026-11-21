@@ -16,27 +16,8 @@ Hi, I'm **Siddhant Dubey**. I build tools, web applications, MVPs, and experimen
   * **Data & Science:** NumPy, pandas, machine learning experimentation.
   * **Frontend & Graphics:** React 18, Three.js (WebGL), GSAP + ScrollTrigger, Lenis smooth scrolling, Tailwind CSS, SVG vector animations.
   * **Systems & Tools:** Linux / Arch Linux, Git & GitHub, Node.js.
-* **Connect with Me:**
-  * **Email:** [s1ddhnt.16@gmail.com](mailto:s1ddhnt.16@gmail.com)
-  * **GitHub:** [@s1ddhnt](https://github.com/s1ddhnt)
-  * **LinkedIn:** [Siddhant Dubey](https://www.linkedin.com/in/siddhant-dubey-764392340/)
-  * **Discord:** `942579114093731850`
 
----
 
-## ✨ Features & Architecture
-
-* **Interactive 3D Laptop Experience:** Real-time 3D laptop with scroll-driven opening animation, perspective zoom, and live ASCII terminal loop.
-* **3D Perspective Flip Card:** Interactive character card in the About section with mouse tracking and click-to-flip interaction.
-* **Scroll-Driven Vector Signature:** Handcrafted cursive signature path (`siddhant-signature.svg`) animated with GSAP `stroke-dashoffset`.
-* **Curated Projects Showcase:**
-  * **MeetHub:** Modern meeting and scheduling web application.
-  * **Paladin Project:** Immersive 3D interactive environment.
-  * **Sowser:** Fast, lightweight browser tool.
-  * **Unhider for Reddit:** Chrome extension for uncovering hidden reddit content.
-* **Dynamic Interactive Story Page (`/my-story`):** Interactive Processing.js canvas sketch featuring an animated Star Wars BB-8 droid.
-* **Seamless Email Direct Action:** Single-click email links with automatic clipboard copy and instant Gmail compose tab redirect.
-* **High-Performance & Responsive:** Optimized to 70+ FPS with zero layout thrashing, zero dropped frames, and seamless touch responsiveness.
 
 ---
 
