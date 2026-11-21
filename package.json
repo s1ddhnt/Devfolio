@@ -1,13 +1,20 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "Siddharth Farkade Portfolio Website",
+  "description": "Siddhant Dubey — Personal Developer Portfolio",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "portfolio",
+    "developer",
+    "react",
+    "threejs",
+    "gsap",
+    "siddhant-dubey"
+  ],
+  "author": "Siddhant Dubey",
+  "license": "MIT"
 }

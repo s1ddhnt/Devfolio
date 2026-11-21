@@ -1,6 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
 const { exec } = require('child_process');
 
 const PORT = parseInt(process.env.PORT, 10) || 3000;
@@ -65,9 +66,30 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-  const url = `http://localhost:${PORT}`;
+  const localUrl = `http://localhost:${PORT}`;
+  let networkUrl = '';
+  try {
+    const nets = os.networkInterfaces();
+    for (const name of Object.keys(nets)) {
+      for (const net of nets[name]) {
+        if (net.family === 'IPv4' && !net.internal) {
+          networkUrl = `http://${net.address}:${PORT}`;
+          break;
+        }
+      }
+      if (networkUrl) break;
+    }
+  } catch (_) {}
+
   console.log(`\n==============================================`);
-  console.log(`  Portfolio Website running at: ${url}`);
+  console.log(`  Portfolio Website is running!`);
+  console.log(``);
+  console.log(`  💻 Laptop / PC : ${localUrl}`);
+  if (networkUrl) {
+    console.log(`  📱 Phone / LAN : ${networkUrl}`);
+    console.log(`     (Ensure phone is on the same Wi-Fi)`);
+  }
+  console.log(``);
   console.log(`  Press Ctrl+C to stop the server.`);
   console.log(`==============================================\n`);
 

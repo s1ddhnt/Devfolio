@@ -11,3 +11,6 @@ Thumbs.db
 
 # Nested local mirror
 portfolio.sidfz.tech/
+
+# Quarantined files awaiting user review
+_quarantine/
