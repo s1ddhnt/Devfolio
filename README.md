@@ -1,4 +1,4 @@
-# Siddhant Dubey — Personal Developer Portfolio
+# Hii I am Siddhant and this is my Portfolio
 
 > Full-stack developer, builder, and tinkerer. Building things, learning deeply, and documenting the journey.
 
