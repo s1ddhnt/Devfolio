@@ -66,7 +66,8 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-  const localUrl = `http://localhost:${PORT}`;
+  const url = `http://localhost:${PORT}`;
+  const localUrl = url;
   let networkUrl = '';
   try {
     const nets = os.networkInterfaces();
